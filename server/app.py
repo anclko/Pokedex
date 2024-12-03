@@ -1,11 +1,12 @@
 from flask import Flask
-from routes.pokemon_routes import pokemon_bp
+from server.routes.pokemon_general import pokemon_bp
 
 app = Flask(__name__)
 
-#calling the blueprint
+#calling all the routes on here
 app.register_blueprint(pokemon_bp)
 
+landing page just to display if it works
 @app.route('/')
 def home():
     return ({"message": "Welcome to the Pokedex!"})
