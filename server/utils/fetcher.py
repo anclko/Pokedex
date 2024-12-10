@@ -1,6 +1,6 @@
 import requests
 
-def fetch_pokemonapi(endpoint):
+def fetch_api(endpoint):
     """
     This fetches data from PokeAPI site dynamically
     :param endpoint: The specific endpoint to hit (ex: pokemon/{name})
@@ -12,6 +12,7 @@ def fetch_pokemonapi(endpoint):
 
     try:
         response = requests.get(url)
+        response.raise_for_status()
         return response.json(), response.status_code
     except requests.RequestException as e:
         return {"error": str(e)}, 500

@@ -1,5 +1,5 @@
 from flask import Flask
-from server.routes.pokemon_general import pokemon_bp
+from routes.pokemon import pokemon_bp
 
 app = Flask(__name__)
 
