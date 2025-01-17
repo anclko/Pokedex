@@ -1,3 +1,11 @@
+/*This is the global styles file where TailwindCSS utilities and base styles are imported. 
+It also defines some default styles (:root) for the website's appearance.
+
+It should include any global styles or utility overrides.
+Keep TailwindCSS imports (@tailwind base, @tailwind components, @tailwind utilities).
+*/
+
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities

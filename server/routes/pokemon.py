@@ -11,10 +11,12 @@ def get_pokemon(name):
     :return: A JSON response with information about the Pokémon or an error message if the pokemon is not found.
     """
 
+    # fetch the api and if it doesnt work, return an error message
     info, status = fetch_api(f"/pokemon/{name}")
     if status != 200:
         return jsonify({"error": "Pokemon not found!"}), status
     
+    # puts the information of pokemon in key value pairs
     general = {
         "id": info["id"],
         "name": info["name"],

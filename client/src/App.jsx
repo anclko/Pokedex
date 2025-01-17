@@ -1,11 +1,19 @@
-import './styles/App.css';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import LandingPage from './pages/LandingPage';
+import PokemonList from './pages/PokemonList';
+import PokemonDetails from './pages/PokemonDetails';
+import AboutPage from './pages/About';
 
 function App() {
   return (
-    <div className="p-10">
-      <h1 className="text-3xl font-bold text-blue-500">This is just a test!</h1>
-      <button className="btn btn-primary mt-4">Button</button>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<LandingPage />} />
+        <Route path="/pokemon-list" element={<PokemonList />} />
+        <Route path="/pokemon/:name" element={<PokemonDetails />} />
+        <Route path="/about" element={<AboutPage />} />
+      </Routes>
+    </Router>
   );
 }
 

@@ -1,3 +1,9 @@
+/*This file defines styles specifically for the app layout, 
+such as the root container styles.
+
+You can keep or extend this file to include any app-wide styles, 
+such as centering content or setting global paddings/margins.*/
+
 #root {
   max-width: 1280px;
   margin: 0 auto;
